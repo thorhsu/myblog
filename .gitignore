@@ -2,3 +2,6 @@
 
 db.sqlite3
 __pycache__
+mainsite/migrations/
+node_modules/
+yarn.lock
