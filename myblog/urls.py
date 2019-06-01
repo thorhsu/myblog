@@ -15,13 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url
-#from django.urls import path
+from django.urls import path
 from mainsite.views import homepage, showpost
 
 
 urlpatterns = [
-    url(r'^$', homepage),
+    #url(r'^$', homepage),
     #path('admin/', admin.site.urls),
-    url(r'^admin/', admin.site.urls),
-    url(r'^post/(\w+)$', showpost),
+    #url(r'^admin/', admin.site.urls),
+    # url(r'^post/(\w+)$', showpost),
+    path('admin/', admin.site.urls),
+    path('', homepage),
+    path('post/<slug>/', showpost),
+
 ]
